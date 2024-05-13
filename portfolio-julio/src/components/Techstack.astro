@@ -1,0 +1,42 @@
+---
+import 'tailwindcss/tailwind.css';
+import HTML5 from '../components/icons/Html5.astro';
+import CSS3 from '../components/icons/Css.astro';
+import JavaScript from '../components/icons/Javascript.astro';
+import ReactJS from '../components/icons/React.astro';
+import TailwindCSS from '../components/icons/Tailwindcss.astro';
+// Importa otros componentes SVG según sea necesario
+
+// Data for the tech stacks
+const techCategories = [
+  {
+    title: 'Frontend',
+    technologies: [
+      { component: HTML5, alt: 'HTML5' },
+      { component: CSS3, alt: 'CSS3' },
+      { component: JavaScript, alt: 'JavaScript' },
+      { component: ReactJS, alt: 'ReactJS' },
+      { component: TailwindCSS, alt: 'TailwindCSS' }
+    ]
+  },
+  // Repite para Backend, Aprendiendo, Herramientas
+];
+---
+
+<div class="container mx-auto">
+  <div class="grid grid-cols-2 gap-4">
+    {techCategories.map(category => (
+      <section class="bg-gray-700 rounded-lg p-5 flex flex-col h-64s space-y-4">
+        <h2 class="font-bold text-xl">{category.title}</h2>
+        <div class="grid grid-cols-4 gap-4 overflow-auto mt-2 justify-items-center">
+          {category.technologies.map(tech => (
+            <figure>
+              <tech.component class="w-10 h-10" />
+              <figcaption class="text-xs text-center text-white">{tech.alt}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+</div>

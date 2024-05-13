@@ -1,0 +1,110 @@
+<div class="grid grid-cols-3 gap-6">
+  <div class="col-span-1 flex flex-col items-center justify-center rounded-lg">
+    <a
+      href="http://18.220.89.49:6900"
+      class="relative block w-full h-full"
+      target="_blank"
+      rel="noopener"
+    >
+      <img
+        src="/Blog.png"
+        alt="Descripción de la imagen"
+        class="w-full h-full rounded-lg hover:scale-110 transition"
+      />
+    </a>
+  </div>
+  <div
+    class="col-span-2 flex flex-col items-start justify-center p-4 rounded-lg shadow border-draw"
+  >
+    <h4 class="text-lg font-bold mb-2 text-sky-100">Blog de Fútbol</h4>
+    <p class="text-sm opacity-80">
+      Blog de fútbol, que cuenta con una ruta privada y protegida /admin, que
+      cuenta con un dashboard con un CRUD para poder manejar las publicaciones.
+    </p>
+  </div>
+  <div
+    class="col-span-2 flex flex-col items-start justify-center p-4 rounded-lg shadow border-draw order-3 lg:order-2"
+  >
+    <h4 class="text-lg font-bold mb-2 text-sky-100">Chat Grupal</h4>
+    <p class="text-sm opacity-80">
+      Chat grupal que se conecta a una API, todo desarrollado con JavaScript
+      vanilla y es interactivo con todas las personas que se logren conectar a
+      la API.
+    </p>
+  </div>
+  <div
+    class="col-span-1 flex flex-col items-center justify-center order-2 lg:order-3 rounded-lg shadow"
+  >
+    <a
+      href="http://18.220.89.49:3700"
+      class="w-full h-full relative block"
+      target="_blank"
+      rel="noopener"
+    >
+      <img
+        src="/Chat.png"
+        alt="Descripción de la segunda imagen"
+        class="block w-full h-full rounded-lg hover:scale-110 transition"
+      />
+    </a>
+  </div>
+</div>
+
+<style>
+  .border-draw {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .border-draw::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid white;
+    border-radius: inherit;
+    z-index: 1;
+  }
+
+  .border-draw::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid transparent;
+    border-radius: inherit;
+    box-shadow: 0 0 15px rgb(239, 73, 239);
+    filter: saturate(4);
+    z-index: 2;
+    opacity: 90%;
+  }
+
+  .border-draw:hover::after {
+    animation: draw-border 3.5s linear forwards;
+  }
+
+  @keyframes draw-border {
+    0% {
+      border-color: transparent;
+    }
+    25% {
+      border-top-color: purple;
+    }
+    50% {
+      border-top-color: purple;
+      border-right-color: purple;
+    }
+    75% {
+      border-top-color: purple;
+      border-right-color: purple;
+      border-bottom-color: purple;
+    }
+    100% {
+      border-color: purple;
+    }
+  }
+</style>

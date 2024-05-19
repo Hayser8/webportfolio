@@ -1,42 +1,76 @@
 ---
-import 'tailwindcss/tailwind.css';
-import HTML5 from '../components/icons/Html5.astro';
-import CSS3 from '../components/icons/Css.astro';
-import JavaScript from '../components/icons/Javascript.astro';
-import ReactJS from '../components/icons/React.astro';
-import TailwindCSS from '../components/icons/Tailwindcss.astro';
-// Importa otros componentes SVG según sea necesario
+import "tailwindcss/tailwind.css";
 
-// Data for the tech stacks
+// Importa los componentes SVG
+import HTML5 from "../components/icons/Html5.astro";
+import CSS3 from "../components/icons/Css.astro";
+import JavaScript from "../components/icons/Javascript.astro";
+import ReactJS from "../components/icons/React.astro";
+import TailwindCSS from "../components/icons/Tailwindcss.astro";
+import Express from "../components/icons/Express.astro";
+import NodeJS from "../components/icons/Nodejs.astro";
+import MySQL from "../components/icons/Mysql.astro";
+import PostgreSQL from "../components/icons/Postgres.astro";
+import Docker from "../components/icons/Docker.astro";
+import TypeScript from "../components/icons/TypeScript.astro";
+import Git from "../components/icons/Git.astro";
+import GitHub from "../components/icons/Github.astro";
+
 const techCategories = [
   {
-    title: 'Frontend',
+    title: "Frontend",
     technologies: [
-      { component: HTML5, alt: 'HTML5' },
-      { component: CSS3, alt: 'CSS3' },
-      { component: JavaScript, alt: 'JavaScript' },
-      { component: ReactJS, alt: 'ReactJS' },
-      { component: TailwindCSS, alt: 'TailwindCSS' }
-    ]
+      { component: HTML5, alt: "HTML5" },
+      { component: CSS3, alt: "CSS3" },
+      { component: JavaScript, alt: "JavaScript" },
+      { component: ReactJS, alt: "ReactJS" },
+      { component: TailwindCSS, alt: "TailwindCSS" },
+    ],
   },
-  // Repite para Backend, Aprendiendo, Herramientas
+  {
+    title: "Backend",
+    technologies: [
+      { component: Express, alt: "Express" },
+      { component: NodeJS, alt: "NodeJS" },
+    ],
+  },
+  {
+    title: "Bases de Datos",
+    technologies: [
+      { component: MySQL, alt: "MySQL" },
+      { component: PostgreSQL, alt: "PostgreSQL" },
+    ],
+  },
+  {
+    title: "Herramientas",
+    technologies: [
+      { component: Docker, alt: "Docker" },
+      { component: TypeScript, alt: "TypeScript" },
+      { component: Git, alt: "Git logo" },
+      { component: GitHub, alt: "GitHub" },
+    ],
+  },
 ];
 ---
 
-<div class="container mx-auto">
-  <div class="grid grid-cols-2 gap-4">
-    {techCategories.map(category => (
-      <section class="bg-gray-700 rounded-lg p-5 flex flex-col h-64s space-y-4">
-        <h2 class="font-bold text-xl">{category.title}</h2>
-        <div class="grid grid-cols-4 gap-4 overflow-auto mt-2 justify-items-center">
-          {category.technologies.map(tech => (
-            <figure>
-              <tech.component class="w-10 h-10" />
-              <figcaption class="text-xs text-center text-white">{tech.alt}</figcaption>
-            </figure>
-          ))}
-        </div>
-      </section>
-    ))}
+<div class="container mx-auto p-6">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    {
+      techCategories.map((category) => (
+        <section class="bg-gray-700 rounded-lg p-5 flex flex-col space-y-4 min-h-[300px]">
+          <h2 class="font-bold text-xl">{category.title}</h2>
+          <div class="grid grid-cols-4 sm:grid-cols-2 md:grid-cols-4 gap-4 overflow-auto mt-2 px-1 items-center justify-center">
+            {category.technologies.map((tech) => (
+              <figure class="flex flex-col items-center justify-center">
+                <tech.component class="w-10 h-10" />
+                <figcaption class="text-xs text-center text-white">
+                  {tech.alt}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+      ))
+    }
   </div>
 </div>

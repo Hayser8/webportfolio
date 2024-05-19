@@ -1,60 +1,68 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
-import Badge from "../components/Badge.astro";
 import LinkedinIcon from "../components/icons/Linkedin.astro";
 import MailIcon from "../components/icons/Mail.astro";
 import GithubIcon from "../components/icons/Github.astro";
 import Socials from "../components/Socials.astro";
 import Exptimeline from "../components/Exptimeline.astro";
 import Bentoprojects from "../components/Bentoprojects.astro";
-import Techstack from "../components/Techstack.astro"
+import Techstack from "../components/Techstack.astro";
 ---
 
 <Layout title="Portfolio de Julio García Salas - Estudiante de CC&TI">
   <main class="py-10 overflow-x-hidden">
     <div id="inicio" class="w-full lg:w-[690px] mx-auto">
-      <section class="py-20 flex flex-col items-center">
+      <section class="py-12 sm:py-20 flex flex-col items-center">
         <img
-          class="rounded-full w-24 h-24 mb-4"
+          class="rounded-full w-16 h-16 sm:w-24 sm:h-24 mb-4"
           src="https://media.licdn.com/dms/image/C4E03AQF1D_gBh6bEhg/profile-displayphoto-shrink_200_200/0/1578967904286?e=2147483647&v=beta&t=iRuyp2YOgy-XQ3zrYo6PlwAt-gA7ODZblDd6tKEKaU4"
           alt="Julio García Salas"
         />
-        <h1 class="text-4xl font-bold text-white mb-2 animate-fadeIn">
+        <h1
+          class="text-3xl sm:text-4xl font-bold text-white mb-2 animate-fadeIn"
+        >
           Julio García Salas
         </h1>
-        <h2 class="text-2xl text-white animate-fadeIn">
+        <h2 class="text-sm sm:text-2xl text-white animate-fadeIn">
           Estudiante de CC&TI en la Universidad del Valle de Guatemala
         </h2>
       </section>
-      <section class="py-28">
-        <h3 class="text-xl font-semibold text-center mb-4">Sociales</h3>
-        <div class="flex justify-center gap-x-4">
-          <Socials href="https://www.linkedin.com">
-            <LinkedinIcon class="w-6 h-6" />
-            Linkedin
+      <section class="py-16 sm:py-28">
+        <h3 class="text-lg sm:text-xl font-semibold text-center mb-4">
+          Sociales
+        </h3>
+        <div class="flex justify-center gap-x-2 sm:gap-x-4">
+          <Socials
+            href="https://www.linkedin.com/in/julio-garcia-salas-14507930b/"
+          >
+            <LinkedinIcon class="w-5 h-5 sm:w-6 sm:h-6" />
+            <span class="text-sm sm:text-base">Linkedin</span>
           </Socials>
-          <Socials href="https://github.com">
-            <GithubIcon class="w-6 h-6" />
-            Github
+          <Socials href="https://github.com/Hayser8">
+            <GithubIcon class="w-5 h-5 sm:w-6 sm:h-6" />
+            <span class="text-sm sm:text-base">Github</span>
           </Socials>
           <Socials href="mailto:garciasalasperezjulio@gmail.com">
-            <MailIcon class="w-6 h-6" />
-            Email
+            <MailIcon class="w-5 h-5 sm:w-6 sm:h-6" />
+            <span class="text-sm sm:text-base">Email</span>
           </Socials>
         </div>
       </section>
-      <section id="experiencia" class="py-14">
-        <h3 class="text-xl font-semibold text-center mb-4">Experiencia</h3>
-        <div class="flex flex-col items-center">
+
+      <section id="experiencia" class="py-8 px-8 sm:py-14">
+        <h3 class="text-lg sm:text-xl font-semibold text-center mb-2 sm:mb-4">
+          Experiencia
+        </h3>
+        <div class="mt-4 flex flex-col items-center">
           <Exptimeline />
         </div>
       </section>
+
       <section class="py-14" id="proyectos">
         <h3 class="text-xl font-semibold text-center mb-6">Proyectos</h3>
         <Bentoprojects />
       </section>
-      <section>
+      <section class="py-14" id="tecnologias">
         <h3 class="text-xl font-semibold text-center mb-6">Tecnologías</h3>
         <Techstack />
       </section>

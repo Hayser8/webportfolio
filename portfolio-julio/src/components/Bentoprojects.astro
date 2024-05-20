@@ -1,53 +1,67 @@
+---
+import HTML5 from "../components/icons/Html5.astro";
+import CSS3 from "../components/icons/Css.astro";
+import JavaScript from "../components/icons/Javascript.astro";
+import ReactJS from "../components/icons/React.astro";
+import Vite from "../components/icons/Vite.astro";
+import Express from "../components/icons/Express.astro";
+import NodeJS from "../components/icons/Nodejs.astro";
+---
+
+<script>
+  if (typeof window !== "undefined") {
+    document.addEventListener("DOMContentLoaded", () => {
+      const elements = document.querySelectorAll('.animate-on-scroll');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('slide-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      });
+
+      elements.forEach(el => observer.observe(el));
+    });
+  }
+</script>
+
 <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-  <div
-    class="col-span-1 sm:col-span-1 flex flex-col items-center justify-center rounded-lg"
-  >
-    <a
-      href="http://18.220.89.49:6900"
-      class="relative block w-full h-full"
-      target="_blank"
-      rel="noopener"
-    >
-      <img
-        src="/Blog.png"
-        alt="Descripción de la imagen"
-        class="w-full h-full rounded-lg hover:scale-110 transition"
-      />
+  <div class="col-span-1 sm:col-span-1 flex flex-col items-center justify-center rounded-lg animate-on-scroll">
+    <a href="http://18.220.89.49:6900" class="relative block w-full h-full" target="_blank" rel="noopener">
+      <img src="/Blog.png" alt="Descripción de la imagen" class="w-full h-full rounded-lg hover:scale-110 transition" />
     </a>
   </div>
-  <div
-    class="col-span-1 sm:col-span-2 flex flex-col items-start justify-center p-4 rounded-lg shadow border-draw"
-  >
+  <div class="col-span-1 sm:col-span-2 flex flex-col items-start justify-center p-4 rounded-lg shadow border-draw animate-on-scroll">
     <h4 class="text-lg font-bold mb-2 text-sky-100">Blog de Fútbol</h4>
     <p class="text-sm opacity-80">
-      Blog de fútbol, que cuenta con una ruta privada y protegida /admin, que
-      cuenta con un dashboard con un CRUD para poder manejar las publicaciones.
+      Blog de fútbol, que cuenta con una ruta privada y protegida /admin, que cuenta con un dashboard con un CRUD para poder manejar las publicaciones.
     </p>
+    <div class="mt-4 flex flex-wrap gap-2">
+      <HTML5 class="w-6 h-6" />
+      <CSS3 class="w-6 h-6" />
+      <JavaScript class="w-6 h-6" />
+      <ReactJS class="w-6 h-6" />
+      <Vite class="w-6 h-6" />
+      <Express class="w-6 h-6" />
+      <NodeJS class="w-6 h-6" />
+    </div>
   </div>
-  <div
-    class="col-span-1 sm:col-span-2 flex flex-col items-start justify-center p-4 rounded-lg shadow border-draw order-3 sm:order-2"
-  >
+
+  <div class="col-span-1 sm:col-span-2 flex flex-col items-start justify-center p-4 rounded-lg shadow border-draw order-3 sm:order-2 animate-on-scroll">
     <h4 class="text-lg font-bold mb-2 text-sky-100">Chat Grupal</h4>
     <p class="text-sm opacity-80">
-      Chat grupal que se conecta a una API, todo desarrollado con JavaScript
-      vanilla y es interactivo con todas las personas que se logren conectar a
-      la API.
+      Chat grupal que se conecta a una API, todo desarrollado con JavaScript vanilla y es interactivo con todas las personas que se logren conectar a la API.
     </p>
+    <div class="mt-4 flex flex-wrap gap-2">
+      <HTML5 class="w-6 h-6" />
+      <JavaScript class="w-6 h-6" />
+      <CSS3 class="w-6 h-6" />
+    </div>
   </div>
-  <div
-    class="col-span-1 sm:col-span-1 flex flex-col items-center justify-center order-2 sm:order-3 rounded-lg shadow"
-  >
-    <a
-      href="http://18.220.89.49:3700"
-      class="w-full h-full relative block"
-      target="_blank"
-      rel="noopener"
-    >
-      <img
-        src="/Chat.png"
-        alt="Descripción de la segunda imagen"
-        class="block w-full h-full rounded-lg hover:scale-110 transition"
-      />
+  <div class="col-span-1 sm:col-span-1 flex flex-col items-center justify-center order-2 sm:order-3 rounded-lg shadow animate-on-scroll">
+    <a href="http://18.220.89.49:3700" class="w-full h-full relative block" target="_blank" rel="noopener">
+      <img src="/Chat.png" alt="Descripción de la segunda imagen" class="block w-full h-full rounded-lg hover:scale-110 transition" />
     </a>
   </div>
 </div>
@@ -108,5 +122,20 @@
     100% {
       border-color: purple;
     }
+  }
+
+  @keyframes slideInFromRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .slide-in {
+    animation: slideInFromRight 1s ease-out forwards;
   }
 </style>

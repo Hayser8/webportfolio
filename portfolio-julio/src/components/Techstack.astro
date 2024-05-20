@@ -7,7 +7,7 @@ import CSS3 from "../components/icons/Css.astro";
 import JavaScript from "../components/icons/Javascript.astro";
 import ReactJS from "../components/icons/React.astro";
 import TailwindCSS from "../components/icons/Tailwindcss.astro";
-import AstroIcon from "./icons/AstroIcon.astro"
+import AstroIcon from "./icons/AstroIcon.astro";
 import Express from "../components/icons/Express.astro";
 import NodeJS from "../components/icons/Nodejs.astro";
 import MySQL from "../components/icons/Mysql.astro";
@@ -20,7 +20,6 @@ import Nextjs from "../components/icons/Nextjs.astro";
 import Aws from "../components/icons/Aws.astro";
 import Vercel from "../components/icons/Vercel.astro";
 import Vite from "../components/icons/Vite.astro";
-
 
 const techCategories = [
   {
@@ -68,8 +67,8 @@ const techCategories = [
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
     {
       techCategories.map((category) => (
-        <section class="bg-gray-700 rounded-lg p-5 flex flex-col space-y-4 min-h-[300px]">
-          <h2 class="font-bold text-xl">{category.title}</h2>
+        <section class="bg-gradient-to-r from-gradientStart to-gradientEnd shadow-custom rounded-lg p-5 flex flex-col space-y-4 min-h-[300px]">
+          <h2 class="font-bold text-xl text-white">{category.title}</h2>
           <div class="grid grid-cols-4 sm:grid-cols-2 md:grid-cols-4 gap-4 overflow-auto mt-2 px-1 items-center justify-center">
             {category.technologies.map((tech) => (
               <figure class="flex flex-col items-center justify-center">

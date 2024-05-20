@@ -40,12 +40,19 @@ const { title } = Astro.props;
   html {
     font-family: "Onest Variable", system-ui, sans-serif;
   }
-  body {
+  html, body {
+    width: 100%; 
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+}
+
+body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    margin: 0;
-  }
+}
+
   .bg-blur {
     background-color: rgb(2 6 23 / var(--tw-bg-opacity)); 
     backdrop-filter: blur(10px);

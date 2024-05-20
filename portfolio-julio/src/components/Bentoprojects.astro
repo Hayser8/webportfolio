@@ -6,6 +6,26 @@ import ReactJS from "../components/icons/React.astro";
 import Vite from "../components/icons/Vite.astro";
 import Express from "../components/icons/Express.astro";
 import NodeJS from "../components/icons/Nodejs.astro";
+
+const setupObserver = () => {
+  if (typeof window !== "undefined") {
+    document.addEventListener("DOMContentLoaded", () => {
+      const elements = document.querySelectorAll('.animate-on-scroll');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('slide-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      });
+
+      elements.forEach(el => observer.observe(el));
+    });
+  }
+};
+
+setupObserver();
 ---
 
 <script>
@@ -135,7 +155,14 @@ import NodeJS from "../components/icons/Nodejs.astro";
     }
   }
 
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+
   .slide-in {
-    animation: slideInFromRight 1s ease-out forwards;
+    opacity: 1;
+    transform: translateX(0);
   }
 </style>

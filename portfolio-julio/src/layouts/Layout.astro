@@ -1,6 +1,6 @@
 ---
 import "@fontsource-variable/onest";
-import Header from "../components/Header"
+import Header from "../components/Header";
 
 interface Props {
   title: string;
@@ -13,48 +13,53 @@ const { title } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Julio García Salas - Estudiante de CC&TI en la Universidad del Valle de Guatemala" />
+    <meta
+      name="description"
+      content="Julio García Salas - Estudiante de CC&TI en la Universidad del Valle de Guatemala"
+    />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="overflow-x-hidden">
-    <div class="relative h-full w-full bg-slate-950 z-[-1]">
+  <body class="overflow-x-hidden bg-slate-950">
+    <div class="fixed inset-0 z-[-1] overflow-hidden">
       <div
-        class="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"
+        class="absolute bottom-0 left-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"
       >
-      </div><div
+      </div>
+      <div
         class="absolute bottom-0 right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"
       >
       </div>
     </div>
-    <Header client:load/>
+    <Header client:load />
     <slot />
   </body>
 </html>
 <style is:global>
   :root {
-    color-scheme: light dark;
+    color-scheme: dark;
   }
   html {
     font-family: "Onest Variable", system-ui, sans-serif;
   }
-  html, body {
-    width: 100%; 
+  html,
+  body {
+    width: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; 
-}
+    overflow-x: hidden;
+  }
 
-body {
+  body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
+  }
 
   .bg-blur {
-    background-color: rgb(2 6 23 / var(--tw-bg-opacity)); 
+    background-color: rgba(2, 6, 23, 0.314); 
     backdrop-filter: blur(10px);
-}
+  }
 </style>

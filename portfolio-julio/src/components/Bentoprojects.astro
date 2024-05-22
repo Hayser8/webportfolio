@@ -10,17 +10,17 @@ import NodeJS from "../components/icons/Nodejs.astro";
 const setupObserver = () => {
   if (typeof window !== "undefined") {
     document.addEventListener("DOMContentLoaded", () => {
-      const elements = document.querySelectorAll('.animate-on-scroll');
+      const elements = document.querySelectorAll(".animate-on-scroll");
       const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('slide-in');
+            entry.target.classList.add("slide-in");
             observer.unobserve(entry.target);
           }
         });
       });
 
-      elements.forEach(el => observer.observe(el));
+      elements.forEach((el) => observer.observe(el));
     });
   }
 };
@@ -31,31 +31,45 @@ setupObserver();
 <script>
   if (typeof window !== "undefined") {
     document.addEventListener("DOMContentLoaded", () => {
-      const elements = document.querySelectorAll('.animate-on-scroll');
+      const elements = document.querySelectorAll(".animate-on-scroll");
       const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('slide-in');
+            entry.target.classList.add("slide-in");
             observer.unobserve(entry.target);
           }
         });
       });
 
-      elements.forEach(el => observer.observe(el));
+      elements.forEach((el) => observer.observe(el));
     });
   }
 </script>
 
 <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-  <div class="col-span-1 sm:col-span-1 flex flex-col items-center justify-center rounded-lg animate-on-scroll">
-    <a href="http://18.220.89.49:6900" class="relative block w-full h-full" target="_blank" rel="noopener">
-      <img src="/Blog.png" alt="Descripción de la imagen" class="w-full h-full rounded-lg hover:scale-110 transition" />
+  <div
+    class="col-span-1 sm:col-span-1 flex flex-col items-center justify-center rounded-lg animate-on-scroll"
+  >
+    <a
+      href="http://18.220.89.49:6900"
+      class="relative block w-full h-full"
+      target="_blank"
+      rel="noopener"
+    >
+      <img
+        src="/Blog.png"
+        alt="Descripción de la imagen"
+        class="w-full h-full rounded-lg hover:scale-110 transition"
+      />
     </a>
   </div>
-  <div class="col-span-1 sm:col-span-2 flex flex-col items-start justify-center p-4 rounded-lg shadow border-draw animate-on-scroll">
+  <div
+    class="col-span-1 sm:col-span-2 flex flex-col items-start justify-center p-4 rounded-lg shadow border-draw animate-on-scroll"
+  >
     <h4 class="text-lg font-bold mb-2 text-sky-200">Blog de Fútbol</h4>
     <p class="text-sm opacity-80">
-      Blog de fútbol, que cuenta con una ruta privada y protegida /admin, que cuenta con un dashboard con un CRUD para poder manejar las publicaciones.
+      Blog de fútbol, que cuenta con una ruta privada y protegida /admin, que
+      cuenta con un dashboard con un CRUD para poder manejar las publicaciones.
     </p>
     <div class="mt-4 flex flex-wrap gap-2">
       <HTML5 class="w-6 h-6" />
@@ -68,10 +82,14 @@ setupObserver();
     </div>
   </div>
 
-  <div class="col-span-1 sm:col-span-2 flex flex-col items-start justify-center p-4 rounded-lg shadow border-draw order-3 sm:order-2 animate-on-scroll">
+  <div
+    class="col-span-1 sm:col-span-2 flex flex-col items-start justify-center p-4 rounded-lg shadow border-draw order-3 sm:order-2 animate-on-scroll"
+  >
     <h4 class="text-lg font-bold mb-2 text-sky-200">Chat Grupal</h4>
     <p class="text-sm opacity-80">
-      Chat grupal que se conecta a una API, todo desarrollado con JavaScript vanilla y es interactivo con todas las personas que se logren conectar a la API.
+      Chat grupal que se conecta a una API, todo desarrollado con JavaScript
+      vanilla y es interactivo con todas las personas que se logren conectar a
+      la API.
     </p>
     <div class="mt-4 flex flex-wrap gap-2">
       <HTML5 class="w-6 h-6" />
@@ -79,10 +97,85 @@ setupObserver();
       <CSS3 class="w-6 h-6" />
     </div>
   </div>
-  <div class="col-span-1 sm:col-span-1 flex flex-col items-center justify-center order-2 sm:order-3 rounded-lg shadow animate-on-scroll">
-    <a href="http://18.220.89.49:3700" class="w-full h-full relative block" target="_blank" rel="noopener">
-      <img src="/Chat.png" alt="Descripción de la segunda imagen" class="block w-full h-full rounded-lg hover:scale-110 transition" />
+  <div
+    class="col-span-1 sm:col-span-1 flex flex-col items-center justify-center order-2 sm:order-3 rounded-lg shadow animate-on-scroll"
+  >
+    <a
+      href="http://18.220.89.49:3700"
+      class="w-full h-full relative block"
+      target="_blank"
+      rel="noopener"
+    >
+      <img
+        src="/Chat.png"
+        alt="Descripción de la segunda imagen"
+        class="block w-full h-full rounded-lg hover:scale-110 transition"
+      />
     </a>
+  </div>
+
+  <div
+    class="col-span-1 order-3 sm:col-span-1 flex flex-col items-center justify-center rounded-lg animate-on-scroll"
+  >
+    <a
+      href="http://18.220.89.49:3400"
+      class="relative block w-full h-full"
+      target="_blank"
+      rel="noopener"
+    >
+      <img
+        src="/perro.png"
+        alt="Descripción de la imagen"
+        class="w-full h-full rounded-lg hover:scale-110 transition"
+      />
+    </a>
+  </div>
+  <div
+    class="col-span-1 order-3 sm:col-span-2 flex flex-col items-start justify-center p-4 rounded-lg shadow border-draw animate-on-scroll"
+  >
+    <h4 class="text-lg font-bold mb-2 text-sky-200">
+      Creación y Animación en CSS
+    </h4>
+    <p class="text-sm opacity-80">
+      Este proyecto es una demostración del poder de CSS, creado íntegramente
+      desde cero utilizando solo hojas de estilo en cascada.
+    </p>
+    <div class="mt-4 flex flex-wrap gap-2">
+      <HTML5 class="w-6 h-6" />
+      <CSS3 class="w-6 h-6" />
+    </div>
+  </div>
+  <div
+    class="col-span-1 sm:col-span-1 flex flex-col items-center justify-center order-4 sm:order-5 rounded-lg shadow animate-on-scroll"
+  >
+    <a
+      href="http://18.220.89.49:3700"
+      class="w-full h-full relative block"
+      target="_blank"
+      rel="noopener"
+    >
+      <img
+        src="/castillo.png"
+        alt="Descripción de la segunda imagen"
+        class="block w-full h-full rounded-lg hover:scale-110 transition"
+      />
+    </a>
+  </div>
+  <div
+    class="col-span-1 sm:col-span-2 flex flex-col items-start justify-center p-4 rounded-lg shadow border-draw order-5 sm:order-4 animate-on-scroll"
+  >
+    <h4 class="text-lg font-bold mb-2 text-sky-200">
+      Historia con progreso hecha en html
+    </h4>
+    <p class="text-sm opacity-80">
+      Descubre la historia de un castillo encantado, creado con solo HTML y un
+      toque de CSS. Este proyecto combina simplicidad y magia en cada línea de
+      código
+    </p>
+    <div class="mt-4 flex flex-wrap gap-2">
+      <HTML5 class="w-6 h-6" />
+      <CSS3 class="w-6 h-6" />
+    </div>
   </div>
 </div>
 
@@ -158,7 +251,9 @@ setupObserver();
   .animate-on-scroll {
     opacity: 0;
     transform: translateX(100%);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    transition:
+      opacity 0.5s ease-out,
+      transform 0.5s ease-out;
   }
 
   .slide-in {

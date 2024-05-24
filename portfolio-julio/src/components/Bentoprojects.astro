@@ -6,6 +6,7 @@ import ReactJS from "../components/icons/React.astro";
 import Vite from "../components/icons/Vite.astro";
 import Express from "../components/icons/Express.astro";
 import NodeJS from "../components/icons/Nodejs.astro";
+import Nextjs from "./icons/Nextjs.astro";
 
 const setupObserver = () => {
   if (typeof window !== "undefined") {
@@ -175,6 +176,38 @@ setupObserver();
     <div class="mt-4 flex flex-wrap gap-2">
       <HTML5 class="w-6 h-6" />
       <CSS3 class="w-6 h-6" />
+    </div>
+  </div>
+
+  <div
+    class="col-span-1 sm:col-span-1 flex flex-col items-center justify-center rounded-lg order-5 sm:order-6 animate-on-scroll"
+  >
+    <a
+      href="http://18.220.89.49:6900"
+      class="relative block w-full h-full"
+      target="_blank"
+      rel="noopener"
+    >
+      <img
+        src="/calculator.png"
+        alt="Descripción de la imagen"
+        class="w-full h-full rounded-lg hover:scale-110 transition"
+      />
+    </a>
+  </div>
+  <div
+    class="col-span-1 sm:col-span-2 flex flex-col items-start justify-center p-4 rounded-lg shadow border-draw order-5 sm: order-6 animate-on-scroll"
+  >
+    <h4 class="text-lg font-bold mb-2 text-sky-200">Calculadora con tests integrados</h4>
+    <p class="text-sm opacity-80">
+      Calculadora funcional con teclado y mouse que integra tests para poder aprender la importancia de testings
+    </p>
+    <div class="mt-4 flex flex-wrap gap-2">
+      <HTML5 class="w-6 h-6" />
+      <CSS3 class="w-6 h-6" />
+      <JavaScript class="w-6 h-6" />
+      <ReactJS class="w-6 h-6" />
+      <Nextjs class="w-6 h-6" />
     </div>
   </div>
 </div>

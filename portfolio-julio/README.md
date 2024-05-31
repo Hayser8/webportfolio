@@ -20,11 +20,6 @@ Tecnologías Utilizadas
 *   **CSS:** Lenguaje de estilos para dar formato y diseño al contenido.
     
 
-Estructura del Proyecto
------------------------
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   plaintextCopiar código/  ├── public/                # Archivos públicos (imágenes, fuentes, etc.)  ├── src/                   # Código fuente del proyecto  │   ├── components/        # Componentes de React  │   ├── layouts/           # Layouts para páginas  │   ├── pages/             # Páginas del sitio  │   ├── styles/            # Estilos globales y configuraciones de TailwindCSS  │     │                  ├── .gitignore             # Archivos y directorios ignorados por Git  ├── astro.config.mjs       # Configuración de Astro  ├── tailwind.config.js     # Configuración de TailwindCSS  ├── package.json           # Dependencias y scripts del proyecto  ├── README.md              # Documentación del proyecto  └── tsconfig.json          # Configuración de TypeScript (si aplica)   `
-
 Instalación y Uso
 -----------------
 
